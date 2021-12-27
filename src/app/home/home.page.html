@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Camera Preview
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="image" [fullscreen]="true">
+  <img [src]="image">
+</ion-content>
+<ion-content *ngIf="!image" [fullscreen]="true">
+  <div class="wrapperPhoto">
+    <div class="title-container">
+      <h1>Seu sorriso aqui</h1>
+    </div>
+  
+    <div class="camera-container">
+      <div class="inner"></div>
+    </div>
+  
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button color="white" (click)="takePicture()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
+</ion-content>
